@@ -5,7 +5,6 @@ on:
       - closed
     branches:
       - main
-
 jobs:
   build:
     if: github.event.pull_request.merged == true
@@ -19,9 +18,9 @@ jobs:
         fetch-depth: '0'
 
     - name: Bump version and push tag
-      uses: anothrNick/github-tag-action:1.71.0
+      uses: anothrNick/github-tag-action@1.71.0
       env:
         GITHUB_TOKEN: ${{ secrets.CREATE_TAG }}
         WITH_V: true
-        PRERELEASE: true
--
+        PRERELEASE: false
+
