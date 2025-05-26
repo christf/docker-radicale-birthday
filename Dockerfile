@@ -1,4 +1,4 @@
-FROM tomsquest/docker-radicale:3.5.3.1
+FROM tomsquest/docker-radicale:3.5.4.0
 
 ARG COMMIT_ID
 ENV COMMIT_ID=${COMMIT_ID}
