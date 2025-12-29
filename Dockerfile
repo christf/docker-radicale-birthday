@@ -29,6 +29,7 @@ RUN apk add --no-cache \
 
 # TODO: It would be nice to have a well-defined release for this for reproducible builds
 RUN curl -o /usr/local/bin/create_birthday_calendar.py https://raw.githubusercontent.com/iBigQ/radicale-birthday-calendar/535ae54ef6464b1aba825af794ecc4c4dbf3d3c3/create_birthday_calendar.py && \
+    chown $BUILD_UID:$BUILD_GID /usr/local/bin/create_birthday_calendar.py && \
     chmod +x /usr/local/bin/create_birthday_calendar.py
 
 
